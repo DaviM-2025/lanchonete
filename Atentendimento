@@ -1,0 +1,16 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Atendimento {
+    private List<Pedido> pedidosProntos = new ArrayList<>();
+
+    public void adicionarPedidoPronto(Pedido pedido) {
+        pedidosProntos.add(pedido);
+    }
+
+    public void listarPedidos() {
+        for (Pedido p : pedidosProntos) {
+            System.out.println("Pedido de: " + p.getCliente().getNome());
+        }
+    }
+}
